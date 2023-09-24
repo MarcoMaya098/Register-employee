@@ -1,0 +1,80 @@
+# version: "3.8"
+
+# services:
+#   web:
+#     build: .
+#     command: npm run dev
+#     volumes:
+#       - .:/usr/app
+#     ports:
+#       - "4000:4000"
+#     depends_on:
+#       - db
+#     environment:
+#       - DB_USER=postgres
+#       - DB_PASSWORD=admin
+#       - DB_HOST=db
+#       - DB_PORT=5432
+#       - DB_DATABASE=testrsidb
+
+#   db:
+#     container_name: postgresdb
+#     image: postgres
+#     restart: always
+#     ports:
+#       - 5432:5432
+#     environment:
+#       POSTGRES_PASSWORD: admin
+#       POSTGRES_DB: testrsidb
+#     volumes: 
+#       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+#   pgadmin:
+#     container_name: mypgadmin
+#     image: dpage/pgadmin4
+#     ports:
+#       - 8080:80
+#     environment:
+#       - PGADMIN_DEFAULT_EMAIL=admin@example.com
+#       - PGADMIN_DEFAULT_PASSWORD=admin
+
+
+version: "3.8"
+
+services:
+  web:
+    build: .
+    command: npm run dev
+    volumes:
+      - .:/usr/app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    environment:
+      - DB_USER=postgres
+      - DB_PASSWORD=admin
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_DATABASE=testrsidb
+
+  db:
+    container_name: postgresdb
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: testrsidb
+    volumes: 
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  pgadmin:
+    container_name: mypgadmin
+    image: dpage/pgadmin4
+    ports:
+      - 8080:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@examples.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
