@@ -1,8 +1,6 @@
 # Register-employee
-STACK PERN + DOCKER
+ PERN STACK + DOCKER
 
-
-# PERN Stack
 
 The PERN Stack is an acronym for Postgres, Express, React, Node. It's a set of tools to create a complete web application.
 
