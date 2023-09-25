@@ -50,7 +50,7 @@ Then to run the frontend:
 
 ```
 cd Register-employee
-npm i
 cd frontend
+npm i
 npm run dev
 ```
