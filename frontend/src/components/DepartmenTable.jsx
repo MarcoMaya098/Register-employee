@@ -45,20 +45,20 @@ export default function DepartmenTable() {
     loaddepartment();
   }, []);
 
-  const handleDelete = async (id_department) => {
-    try {
-      await fetch(`http://localhost:4000/departments/${id_department}`, {
-        method: "DELETE",
-      });
-      setdepartment(
-        department.filter(
-          (departments) => departments.id_department !== id_department
-        )
-      );
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const handleDelete = async (id_department) => {
+  //   try {
+  //     await fetch(`http://localhost:4000/departments/${id_department}`, {
+  //       method: "DELETE",
+  //     });
+  //     setdepartment(
+  //       department.filter(
+  //         (departments) => departments.id_department !== id_department
+  //       )
+  //     );
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <>
@@ -90,7 +90,7 @@ export default function DepartmenTable() {
                 Nombre del departamento
               </StyledTableCell>
               <StyledTableCell align="right">Editar</StyledTableCell>
-              <StyledTableCell align="right">Eliminar</StyledTableCell>
+              {/* <StyledTableCell align="right">Eliminar</StyledTableCell> */}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -114,7 +114,7 @@ export default function DepartmenTable() {
                   </Button>
                 </StyledTableCell>
 
-                <StyledTableCell align="right">
+                {/* <StyledTableCell align="right">
                   <Button
                     variant="contained"
                     color="primary"
@@ -123,7 +123,7 @@ export default function DepartmenTable() {
                   >
                     D
                   </Button>
-                </StyledTableCell>
+                </StyledTableCell> */}
               </StyledTableRow>
             ))}
           </TableBody>
