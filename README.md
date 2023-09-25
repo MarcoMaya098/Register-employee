@@ -33,6 +33,7 @@ In order to execute the project in development, you can use docker-compose to cr
 to run the database you can use docker:
 
 ```
+cd Register-employee
 docker compose up -d
 ```
 Next:
@@ -48,6 +49,8 @@ this command will create the database and the pgadmin client in the following po
 Then to run the frontend:
 
 ```
+cd Register-employee
+npm i
 cd frontend
 npm run dev
 ```
